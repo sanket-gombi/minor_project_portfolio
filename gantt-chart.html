@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart | Cobot End-Effector</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: var(--primary);
+            color: white;
+            padding: 6rem 5% 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">TEAM<span>12</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="team.html">Team</a>
+            <a href="theme.html">Theme</a>
+            <a href="problem-statement.html">Problem Statement</a>
+            <a href="gantt-chart.html" class="active">Gantt Chart</a>
+            <a href="literature-survey.html">Literature Survey</a>
+            <a href="market-patent-survey.html">Market & Patent Survey</a>
+            <a href="engineering-specs.html">Engineering Design</a>
+        </div>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-center">
+        <div class="container reveal">
+            <h1 style="color: white; font-size: 3rem; margin-bottom: 0.5rem;">Project Timeline</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">Task Breakdown & Gantt Chart Schedule</p>
+        </div>
+    </header>
+
+    <!-- Gantt Chart Section -->
+    <section class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 3rem;">
+                <span class="subtitle">Project Timeline</span>
+                <h2 class="section-title">Gantt Chart Schedule</h2>
+            </div>
+
+            <div class="table-container reveal"
+                style="background: var(--card-white); padding: 1.5rem; border: 1px solid #e2e8f0;">
+                <table class="gantt-table" style="min-width: 800px; border-collapse: separate; border-spacing: 0;">
+                    <thead style="background: var(--primary); color: white;">
+                        <tr>
+                            <th style="width: 30%; text-align: left; padding: 1.2rem 1.5rem; border-radius: 6px 0 0 0;">
+                                Task Description</th>
+                            <th style="width: 17.5%; padding: 1.2rem; text-align: center;">Month 1</th>
+                            <th style="width: 17.5%; padding: 1.2rem; text-align: center;">Month 2</th>
+                            <th style="width: 17.5%; padding: 1.2rem; text-align: center;">Month 3</th>
+                            <th style="width: 17.5%; padding: 1.2rem; border-radius: 0 6px 0 0; text-align: center;">
+                                Month 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="task-name" style="padding: 1.2rem 1.5rem;">Literature & Patent Survey</td>
+                            <td class="month-cell"><span class="gantt-bar planning"></span></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                        </tr>
+                        <tr style="background: #f8fafc;">
+                            <td class="task-name" style="padding: 1.2rem 1.5rem;">Ideation & Concept Evaluation</td>
+                            <td class="month-cell"><span class="gantt-bar design"
+                                    style="width: 50%; float: right;"></span></td>
+                            <td class="month-cell"><span class="gantt-bar design"
+                                    style="width: 50%; float: left; border-radius: 0 4px 4px 0;"></span></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                        </tr>
+                        <tr>
+                            <td class="task-name" style="padding: 1.2rem 1.5rem;">Detailed 3D CAD Modeling</td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"><span class="gantt-bar design"></span></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                        </tr>
+                        <tr style="background: #f8fafc;">
+                            <td class="task-name" style="padding: 1.2rem 1.5rem;">Prototyping & Assembly</td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"><span class="gantt-bar build"></span></td>
+                            <td class="month-cell"></td>
+                        </tr>
+                        <tr>
+                            <td class="task-name" style="padding: 1.2rem 1.5rem;">Software Integration (TM Flow)</td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"><span class="gantt-bar build"
+                                    style="width: 50%; float: right; border-radius: 4px 0 0 4px;"></span></td>
+                            <td class="month-cell"><span class="gantt-bar build"
+                                    style="width: 50%; float: left; border-radius: 0 4px 4px 0;"></span></td>
+                        </tr>
+                        <tr style="background: #f8fafc;">
+                            <td class="task-name" style="padding: 1.2rem 1.5rem;">Testing & Validation</td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"></td>
+                            <td class="month-cell"><span class="gantt-bar test"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Gantt Legend -->
+            <div class="reveal"
+                style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 2.5rem; font-size: 0.95rem; font-weight: 600;">
+                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-dark);"><span
+                        style="width: 16px; height: 16px; background: #64748b; border-radius: 4px; display: inline-block;"></span>
+                    Planning Stage</span>
+                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-dark);"><span
+                        style="width: 16px; height: 16px; background: #3b82f6; border-radius: 4px; display: inline-block;"></span>
+                    Design Stage</span>
+                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-dark);"><span
+                        style="width: 16px; height: 16px; background: #f59e0b; border-radius: 4px; display: inline-block;"></span>
+                    Build Stage</span>
+                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-dark);"><span
+                        style="width: 16px; height: 16px; background: #10b981; border-radius: 4px; display: inline-block;"></span>
+                    Testing Stage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- VDI 2206 Model Section -->
+    <section class="vdi-vmodel-section">
+        <div class="container">
+            <div class="vdi-vmodel-container">
+                <!-- VDI Title -->
+                <div class="vdi-vmodel-header">
+                    <h2 class="vdi-main-title">VDI 2206 V-Model</h2>
+                    <p class="vdi-sub-title">Design & Development of End-Effector for TM5-700 Cobot
+                        For Pallet Emptying and ASRS Redocking</p>
+                </div>
+
+                <div class="vdi-vmodel-body">
+                    <!-- Background Elements: V-Lines and level separator dashed lines -->
+                    <svg class="vdi-svg-lines" viewBox="0 0 1000 900" preserveAspectRatio="none">
+                        <!-- Defs for arrow markers -->
+                        <defs>
+                            <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+                                <path d="M2,2 L8,5 L2,8 Z" fill="#3b82f6" />
+                            </marker>
+                            <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+                                <path d="M2,2 L8,5 L2,8 Z" fill="#10b981" />
+                            </marker>
+                            <!-- Double-headed arrow markers -->
+                            <marker id="arrowhead-left" markerWidth="10" markerHeight="10" refX="2" refY="5"
+                                orient="auto">
+                                <path d="M10,2 L2,5 L10,8 Z" fill="#cbd5e1" />
+                            </marker>
+                            <marker id="arrowhead-right" markerWidth="10" markerHeight="10" refX="8" refY="5"
+                                orient="auto">
+                                <path d="M2,2 L10,5 L2,8 Z" fill="#cbd5e1" />
+                            </marker>
+                        </defs>
+
+                        <!-- Horizontal separators for 5 levels -->
+                        <line x1="20" y1="180" x2="980" y2="180" stroke="#cbd5e1" stroke-width="1.5"
+                            stroke-dasharray="6,6" />
+                        <line x1="20" y1="360" x2="980" y2="360" stroke="#cbd5e1" stroke-width="1.5"
+                            stroke-dasharray="6,6" />
+                        <line x1="20" y1="540" x2="980" y2="540" stroke="#cbd5e1" stroke-width="1.5"
+                            stroke-dasharray="6,6" />
+                        <line x1="20" y1="720" x2="980" y2="720" stroke="#cbd5e1" stroke-width="1.5"
+                            stroke-dasharray="6,6" />
+
+                        <!-- Left Blue V-Arm (Decomposition) -->
+                        <path d="M 260,20 L 500,820" fill="none" stroke="#3b82f6" stroke-width="6"
+                            marker-end="url(#arrow-blue)" />
+                        <!-- Right Green V-Arm (Integration) -->
+                        <path d="M 500,820 L 740,20" fill="none" stroke="#10b981" stroke-width="6"
+                            marker-end="url(#arrow-green)" />
+
+                        <!-- Horizontal dashed arrows for verification loops -->
+                        <!-- Level 1 loop (y = 90) -->
+                        <line x1="390" y1="90" x2="610" y2="90" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4"
+                            marker-start="url(#arrowhead-left)" marker-end="url(#arrowhead-right)" />
+                        <!-- Level 2 loop (y = 270) -->
+                        <line x1="430" y1="270" x2="570" y2="270" stroke="#cbd5e1" stroke-width="2"
+                            stroke-dasharray="4,4" marker-start="url(#arrowhead-left)"
+                            marker-end="url(#arrowhead-right)" />
+                        <!-- Level 3 loop (y = 450) -->
+                        <line x1="470" y1="450" x2="530" y2="450" stroke="#cbd5e1" stroke-width="2"
+                            stroke-dasharray="4,4" marker-start="url(#arrowhead-left)"
+                            marker-end="url(#arrowhead-right)" />
+                        <!-- Level 4 loop (y = 630) -->
+                        <line x1="490" y1="630" x2="510" y2="630" stroke="#cbd5e1" stroke-width="1.5"
+                            stroke-dasharray="2,2" marker-start="url(#arrowhead-left)"
+                            marker-end="url(#arrowhead-right)" />
+                    </svg>
+
+                    <!-- Left Side Labels (Vertical Levels) -->
+                    <div class="vdi-level-label" style="top: 0px; height: 180px;">
+                        <div class="vdi-level-title">System Level</div>
+                        <div class="vdi-level-desc">(Context)</div>
+                    </div>
+                    <div class="vdi-level-label" style="top: 180px; height: 180px;">
+                        <div class="vdi-level-title">Subsystem Level</div>
+                        <div class="vdi-level-desc">(Functions)</div>
+                    </div>
+                    <div class="vdi-level-label" style="top: 360px; height: 180px;">
+                        <div class="vdi-level-title">Component Level</div>
+                        <div class="vdi-level-desc">(Design)</div>
+                    </div>
+                    <div class="vdi-level-label" style="top: 540px; height: 180px;">
+                        <div class="vdi-level-title">Module / Unit Level</div>
+                        <div class="vdi-level-desc">(Implementation Building Blocks)</div>
+                    </div>
+                    <div class="vdi-level-label" style="top: 720px; height: 180px;">
+                        <div class="vdi-level-title">Implementation Level</div>
+                        <div class="vdi-level-desc">(Realization)</div>
+                    </div>
+
+                    <!-- LEVEL 1: System Level -->
+                    <div class="vdi-vcard" style="left: 15%; top: 8px; width: 22%; border-color: #3b82f6;">
+                        <div class="vcard-header" style="background-color: #3b82f6;">
+                            <span class="vcard-num">1</span>
+                            <span class="vcard-title">System Definition</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>Define TM5-700 gripper objectives</li>
+                            <li>Identify ASRS warehouse requirements</li>
+                            <li>Study pallet emptying sequences</li>
+                        </ul>
+                    </div>
+
+                    <!-- Connector Labels overlaying the SVG lines -->
+                    <div class="vdi-connector-label-wrapper" style="top: 90px;">
+                        <span class="connector-text">Validation (System Acceptance Test)</span>
+                    </div>
+
+                    <div class="vdi-vcard" style="right: 15%; top: 8px; width: 22%; border-color: #1e3a8a;">
+                        <div class="vcard-header" style="background-color: #1e3a8a;">
+                            <span class="vcard-num">10</span>
+                            <span class="vcard-title">System Validation</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>Pallet emptying operational trials</li>
+                            <li>ASRS redocking process validation</li>
+                            <li>Cycle time & safety validation</li>
+                            <li>Final functional demonstration</li>
+                        </ul>
+                    </div>
+
+                    <!-- LEVEL 2: Subsystem Level -->
+                    <div class="vdi-vcard" style="left: 20%; top: 188px; width: 21%; border-color: #10b981;">
+                        <div class="vcard-header" style="background-color: #10b981;">
+                            <span class="vcard-num">2</span>
+                            <span class="vcard-title">System Design</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>Product system architecture layouts</li>
+                            <li>Functional decomposition of gripper</li>
+                            <li>End-effector concepts generation</li>
+                            <li>Pugh Matrix screening & scoring</li>
+                            <li>Requirement mapping analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="vdi-connector-label-wrapper" style="top: 270px;">
+                        <span class="connector-text">System Verification (Design Review)</span>
+                    </div>
+
+                    <div class="vdi-vcard" style="right: 20%; top: 188px; width: 21%; border-color: #10b981;">
+                        <div class="vcard-header" style="background-color: #10b981;">
+                            <span class="vcard-num">9</span>
+                            <span class="vcard-title">System Verification</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>Concept architecture review</li>
+                            <li>Design safety envelope validation</li>
+                            <li>Hardware-in-loop interface checks</li>
+                            <li>Pugh Matrix evaluation review</li>
+                        </ul>
+                    </div>
+
+                    <!-- LEVEL 3: Component Level -->
+                    <div class="vdi-vcard" style="left: 25%; top: 368px; width: 20%; border-color: #eab308;">
+                        <div class="vcard-header" style="background-color: #eab308; color: #1e293b;">
+                            <span class="vcard-num">3</span>
+                            <span class="vcard-title">Subsystem Design</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>Design mechanical flange interface</li>
+                            <li>Design electrical driver schematic</li>
+                            <li>Layout 6-DOF control trigger logic</li>
+                            <li>Define TM5 GPIO DO5 communication</li>
+                            <li>Material selection (PLA & steel core)</li>
+                        </ul>
+                    </div>
+
+                    <div class="vdi-connector-label-wrapper" style="top: 450px;">
+                        <span class="connector-text">Subsystem Verification</span>
+                    </div>
+
+                    <div class="vdi-vcard" style="right: 25%; top: 368px; width: 20%; border-color: #eab308;">
+                        <div class="vcard-header" style="background-color: #eab308; color: #1e293b;">
+                            <span class="vcard-num">8</span>
+                            <span class="vcard-title">Subsystem Verification</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>Mechanical interface tolerance tests</li>
+                            <li>Electrical signal integrity validation</li>
+                            <li>GPIO communications check</li>
+                            <li>Subsystem interface review</li>
+                        </ul>
+                    </div>
+
+                    <!-- LEVEL 4: Module / Unit Level -->
+                    <div class="vdi-vcard" style="left: 29%; top: 548px; width: 19%; border-color: #f97316;">
+                        <div class="vcard-header" style="background-color: #f97316;">
+                            <span class="vcard-num">4</span>
+                            <span class="vcard-title">Component Design</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>SolidWorks 3D CAD modeling</li>
+                            <li>Sizing electromagnet </li>
+                            <li>Select relay & buck converter</li>
+                            <li>Model TM5 flange adapter bracket</li>
+                            <li>Enclosure circuit board layout</li>
+                        </ul>
+                    </div>
+
+                    <div class="vdi-connector-label-wrapper" style="top: 630px;">
+                        <span class="connector-text">Component Verification</span>
+                    </div>
+
+                    <div class="vdi-vcard" style="right: 29%; top: 548px; width: 19%; border-color: #f97316;">
+                        <div class="vcard-header" style="background-color: #f97316;">
+                            <span class="vcard-num">7</span>
+                            <span class="vcard-title">Component Verification</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>SolidWorks interference validation</li>
+                            <li>FEA stress analysis on Gripper </li>
+                            <li>Driver board schematic review</li>
+                        </ul>
+                    </div>
+
+                    <!-- LEVEL 5: Implementation Level -->
+                    <div class="vdi-vcard" style="left: 27%; top: 728px; width: 17%; border-color: #ef4444;">
+                        <div class="vcard-header" style="background-color: #ef4444;">
+                            <span class="vcard-num">5</span>
+                            <span class="vcard-title">Component Implementation</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>PLA 3D printing of frame parts</li>
+                            <li>Mount electromagnet & solenoid</li>
+                            <li>Solder relay & buck converter circuit</li>
+                            <li>GPIO cabling </li>
+                            <li>Fabricate driver circuit board</li>
+                        </ul>
+                    </div>
+
+                    <!-- Circular Image in Center Bottom -->
+                    <div class="vdi-center-circle">
+                        <img src="images/TM5-700cobot.png" alt="TM5-700 Cobot with Gripper" class="vdi-circle-img">
+                    </div>
+
+                    <div class="vdi-vcard" style="right: 27%; top: 728px; width: 17%; border-color: #ef4444;">
+                        <div class="vcard-header" style="background-color: #ef4444;">
+                            <span class="vcard-num">6</span>
+                            <span class="vcard-title">Component Testing</span>
+                        </div>
+                        <ul class="vcard-bullets">
+                            <li>PLA printed structural load tests</li>
+                            <li>Electromagnet thermal & flux test</li>
+                            <li>Relay switching circuit bench test</li>
+                            <li>GPIO digital output trigger test</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer section containing Legend and Core Flow -->
+                <div class="vdi-vmodel-footer">
+                    <!-- Legend Box -->
+                    <div class="vdi-legend-box">
+                        <h4 class="legend-title">LEGEND</h4>
+                        <div class="legend-row">
+                            <span class="legend-line line-blue"></span>
+                            <span class="legend-text">Decomposition (Top-Down)</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="legend-line line-green"></span>
+                            <span class="legend-text">Integration (Bottom-Up)</span>
+                        </div>
+                        <div class="legend-row">
+                            <span class="legend-line line-dashed"></span>
+                            <span class="legend-text">Verification / Validation Link</span>
+                        </div>
+                        <div class="legend-row-text">
+                            <strong>Left Side:</strong> Definition & Design<br>
+                            <strong>Right Side:</strong> Verification & Validation
+                        </div>
+                    </div>
+
+                    <!-- Project Core Flow -->
+                    <div class="vdi-flow-box">
+                        <h4 class="flow-title">PROJECT CORE FLOW (REFLECTED IN V-MODEL)</h4>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <div class="flow-icon">🔌</div>
+                                <div class="flow-label">Power On</div>
+                            </div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">🤖</div>
+                                <div class="flow-label">AMR Docking</div>
+                            </div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📐</div>
+                                <div class="flow-label">Align & Approach (6-DOF)</div>
+                            </div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">⚡</div>
+                                <div class="flow-label">Pick (Solenoid ON)</div>
+                            </div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📦</div>
+                                <div class="flow-label">Place (Solenoid OFF)</div>
+                            </div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">🔄</div>
+                                <div class="flow-label">ASRS Redocking</div>
+                            </div>
+                        </div>
+                        <div class="flow-footer-text">
+                            Safety Interlocks Active at All Levels (GPIO, Laser Scanner, Homing & E-Stop)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Tasks Description -->
+    <section class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container reveal">
+            <h2 class="text-center" style="margin-bottom: 3.5rem;">Timeline Details & Deliverables</h2>
+
+            <div class="grid grid-4">
+                <div class="card" style="border-top: 4px solid #64748b; background: var(--bg-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.8rem; color: var(--primary);">Month 1</h3>
+                    <h4
+                        style="font-size: 0.95rem; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase;">
+                        Research & Setup</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">
+                        Literature search and patent reviews to benchmark performance criteria. Selection of target
+                        storage bins and initial workspace dimension mappings.
+                    </p>
+                </div>
+                <div class="card" style="border-top: 4px solid #3b82f6; background: var(--bg-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.8rem; color: var(--primary);">Month 2</h3>
+                    <h4
+                        style="font-size: 0.95rem; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase;">
+                        Concept & CAD</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">
+                        Evaluating four design concepts via Pugh Matrix. Detailed 3D CAD modeling of the chosen Hybrid
+                        Soft-Claw in SolidWorks. Finite Element Analysis on jaw displacement.
+                    </p>
+                </div>
+                <div class="card" style="border-top: 4px solid #f59e0b; background: var(--bg-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.8rem; color: var(--primary);">Month 3</h3>
+                    <h4
+                        style="font-size: 0.95rem; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase;">
+                        Build & Circuit</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">
+                        3D printing structural links in PLA and finger pads in TPU. Actuator and FSR sensor wiring.
+                        Initial visual control scripts in TM Flow for shelf landmark tracking.
+                    </p>
+                </div>
+                <div class="card" style="border-top: 4px solid #10b981; background: var(--bg-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.8rem; color: var(--primary);">Month 4</h3>
+                    <h4
+                        style="font-size: 0.95rem; color: var(--accent); margin-bottom: 1rem; text-transform: uppercase;">
+                        Tests & Verify</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">
+                        Integrated redocking trials at the receiving rack. Force validation tests. Optimization of
+                        closed-loop control dynamics. Final documentation and demo setup.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.6;">
+                © 2026 Team 12 | Minor Project - Design & Development of End-Effector for TM5-700 Cobot For Pallet
+                Emptying and ASRS Redocking
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
